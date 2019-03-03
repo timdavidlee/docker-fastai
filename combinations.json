@@ -1,0 +1,48 @@
+{
+    "PYTHON_VERSIONS":[
+        "3.6",
+        "3.7"
+    ],
+    "CUDA_IMAGES":[
+        {
+            "CUDA": "8.0",
+            "UBUNTU_VERSION": "16.04",
+            "CUDNN": "5"
+        },
+        {
+            "CUDA": "8.0",
+            "UBUNTU_VERSION": "16.04",
+            "CUDNN": "6"
+        },
+        {
+            "CUDA": "8.0",
+            "UBUNTU_VERSION": "16.04",
+            "CUDNN": "7"
+        },
+        {
+            "CUDA": "9.0",
+            "UBUNTU_VERSION": "16.04",
+            "CUDNN": "7"
+        },
+        {
+            "CUDA": "9.1",
+            "UBUNTU_VERSION": "16.04",
+            "CUDNN": "7"
+        },
+        {
+            "CUDA": "9.2",
+            "UBUNTU_VERSION": "16.04",
+            "CUDNN": "7"
+        },
+        {
+            "CUDA": "10.0",
+            "UBUNTU_VERSION": "16.04",
+            "CUDNN": "7"
+        },
+        {
+            "CUDA": "10.0",
+            "UBUNTU_VERSION": "18.04",
+            "CUDNN": "7"
+        }
+    ]
+}

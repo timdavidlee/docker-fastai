@@ -1,0 +1,167 @@
+services:
+  cuda100_cudnn7_ub1604_py36:
+    build:
+      args:
+        CUDA: '10.0'
+        CUDNN: '7'
+        PYTHON_VERSION: '3.6'
+        UBUNTU_VERSION: '16.04'
+      context: ./
+      dockerfile: images/fastai-template.Dockerfile
+    image: chaffix/fastai:1.0-cuda10.0_cudnn7_ub16.04_py3.6
+  cuda100_cudnn7_ub1604_py37:
+    build:
+      args:
+        CUDA: '10.0'
+        CUDNN: '7'
+        PYTHON_VERSION: '3.7'
+        UBUNTU_VERSION: '16.04'
+      context: ./
+      dockerfile: images/fastai-template.Dockerfile
+    image: chaffix/fastai:1.0-cuda10.0_cudnn7_ub16.04_py3.7
+  cuda100_cudnn7_ub1804_py36:
+    build:
+      args:
+        CUDA: '10.0'
+        CUDNN: '7'
+        PYTHON_VERSION: '3.6'
+        UBUNTU_VERSION: '18.04'
+      context: ./
+      dockerfile: images/fastai-template.Dockerfile
+    image: chaffix/fastai:1.0-cuda10.0_cudnn7_ub18.04_py3.6
+  cuda100_cudnn7_ub1804_py37:
+    build:
+      args:
+        CUDA: '10.0'
+        CUDNN: '7'
+        PYTHON_VERSION: '3.7'
+        UBUNTU_VERSION: '18.04'
+      context: ./
+      dockerfile: images/fastai-template.Dockerfile
+    image: chaffix/fastai:1.0-cuda10.0_cudnn7_ub18.04_py3.7
+  cuda80_cudnn5_ub1604_py36:
+    build:
+      args:
+        CUDA: '8.0'
+        CUDNN: '5'
+        PYTHON_VERSION: '3.6'
+        UBUNTU_VERSION: '16.04'
+      context: ./
+      dockerfile: images/fastai-template.Dockerfile
+    image: chaffix/fastai:1.0-cuda8.0_cudnn5_ub16.04_py3.6
+  cuda80_cudnn5_ub1604_py37:
+    build:
+      args:
+        CUDA: '8.0'
+        CUDNN: '5'
+        PYTHON_VERSION: '3.7'
+        UBUNTU_VERSION: '16.04'
+      context: ./
+      dockerfile: images/fastai-template.Dockerfile
+    image: chaffix/fastai:1.0-cuda8.0_cudnn5_ub16.04_py3.7
+  cuda80_cudnn6_ub1604_py36:
+    build:
+      args:
+        CUDA: '8.0'
+        CUDNN: '6'
+        PYTHON_VERSION: '3.6'
+        UBUNTU_VERSION: '16.04'
+      context: ./
+      dockerfile: images/fastai-template.Dockerfile
+    image: chaffix/fastai:1.0-cuda8.0_cudnn6_ub16.04_py3.6
+  cuda80_cudnn6_ub1604_py37:
+    build:
+      args:
+        CUDA: '8.0'
+        CUDNN: '6'
+        PYTHON_VERSION: '3.7'
+        UBUNTU_VERSION: '16.04'
+      context: ./
+      dockerfile: images/fastai-template.Dockerfile
+    image: chaffix/fastai:1.0-cuda8.0_cudnn6_ub16.04_py3.7
+  cuda80_cudnn7_ub1604_py36:
+    build:
+      args:
+        CUDA: '8.0'
+        CUDNN: '7'
+        PYTHON_VERSION: '3.6'
+        UBUNTU_VERSION: '16.04'
+      context: ./
+      dockerfile: images/fastai-template.Dockerfile
+    image: chaffix/fastai:1.0-cuda8.0_cudnn7_ub16.04_py3.6
+  cuda80_cudnn7_ub1604_py37:
+    build:
+      args:
+        CUDA: '8.0'
+        CUDNN: '7'
+        PYTHON_VERSION: '3.7'
+        UBUNTU_VERSION: '16.04'
+      context: ./
+      dockerfile: images/fastai-template.Dockerfile
+    image: chaffix/fastai:1.0-cuda8.0_cudnn7_ub16.04_py3.7
+  cuda90_cudnn7_ub1604_py36:
+    build:
+      args:
+        CUDA: '9.0'
+        CUDNN: '7'
+        PYTHON_VERSION: '3.6'
+        UBUNTU_VERSION: '16.04'
+      context: ./
+      dockerfile: images/fastai-template.Dockerfile
+    image: chaffix/fastai:1.0-cuda9.0_cudnn7_ub16.04_py3.6
+  cuda90_cudnn7_ub1604_py37:
+    build:
+      args:
+        CUDA: '9.0'
+        CUDNN: '7'
+        PYTHON_VERSION: '3.7'
+        UBUNTU_VERSION: '16.04'
+      context: ./
+      dockerfile: images/fastai-template.Dockerfile
+    image: chaffix/fastai:1.0-cuda9.0_cudnn7_ub16.04_py3.7
+  cuda91_cudnn7_ub1604_py36:
+    build:
+      args:
+        CUDA: '9.1'
+        CUDNN: '7'
+        PYTHON_VERSION: '3.6'
+        UBUNTU_VERSION: '16.04'
+      context: ./
+      dockerfile: images/fastai-template.Dockerfile
+    image: chaffix/fastai:1.0-cuda9.1_cudnn7_ub16.04_py3.6
+  cuda91_cudnn7_ub1604_py37:
+    build:
+      args:
+        CUDA: '9.1'
+        CUDNN: '7'
+        PYTHON_VERSION: '3.7'
+        UBUNTU_VERSION: '16.04'
+      context: ./
+      dockerfile: images/fastai-template.Dockerfile
+    image: chaffix/fastai:1.0-cuda9.1_cudnn7_ub16.04_py3.7
+  cuda92_cudnn7_ub1604_py36:
+    build:
+      args:
+        CUDA: '9.2'
+        CUDNN: '7'
+        PYTHON_VERSION: '3.6'
+        UBUNTU_VERSION: '16.04'
+      context: ./
+      dockerfile: images/fastai-template.Dockerfile
+    image: chaffix/fastai:1.0-cuda9.2_cudnn7_ub16.04_py3.6
+  cuda92_cudnn7_ub1604_py37:
+    build:
+      args:
+        CUDA: '9.2'
+        CUDNN: '7'
+        PYTHON_VERSION: '3.7'
+        UBUNTU_VERSION: '16.04'
+      context: ./
+      dockerfile: images/fastai-template.Dockerfile
+    image: chaffix/fastai:1.0-cuda9.2_cudnn7_ub16.04_py3.7
+  stable:
+    build:
+      context: ./
+      dockerfile: images/fastai-stable.Dockerfile
+    image: chaffix/fastai:1.0-stable
+version: '3.7'
