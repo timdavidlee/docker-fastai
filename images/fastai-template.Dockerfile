@@ -5,10 +5,10 @@ ARG PYTHON_VERSION
 
 FROM nvidia/cuda:${CUDA}-cudnn${CUDNN}-devel-ubuntu${UBUNTU_VERSION} as base
 
-RUN echo $CUDA
-RUN echo $CUDNN
-RUN echo $UBUNTU_VERSION
-RUN echo $PYTHON_VERSION
+RUN echo "cuda version: $CUDA"
+RUN echo "cudnn version: $CUDNN"
+RUN echo "ubuntu version: $UBUNTU_VERSION"
+RUN echo "python version: $PYTHON_VERSION"
 
 LABEL maintainer="chaffixdev@gmail.com"
 
