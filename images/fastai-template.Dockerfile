@@ -61,7 +61,7 @@ RUN pip install -U \
 RUN pip install pandas \
         numpy \
         keras \
-        sklearn \
+        sklearn
 
 RUN pip install https://download.pytorch.org/whl/cu${CUDA/.}/torch-1.0.1.post2-cp${PYTHON_VERSION}-cp${PYTHON_VERSION}m-linux_x86_64.whl \
     pip install torchvision
