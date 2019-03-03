@@ -12,8 +12,8 @@ RUN echo "python version: $PYTHON_VERSION"
 
 LABEL maintainer="chaffixdev@gmail.com"
 
-# Needed for string substitution 
-SHELL ["/bin/bash", "-c"]
+# # Needed for string substitution 
+# SHELL ["/bin/bash", "-c"]
 
 # Pick up some basic dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \
