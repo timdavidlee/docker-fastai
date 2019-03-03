@@ -33,7 +33,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # See http://bugs.python.org/issue19846
 ENV LANG C.UTF-8
 
+
 # install python
+RUN add-apt-repository ppa:deadsnakes/ppa
 RUN apt-get update && apt-get install -y --no-install-recommends \
     python${PYTHON_VERSION} \
     python${PYTHON_VERSION}-distutils \
@@ -89,3 +91,5 @@ RUN pip install -U \
     traitlets
 
 RUN pip install git+https://github.com/fastai/fastai.git
+
+# jupyter
