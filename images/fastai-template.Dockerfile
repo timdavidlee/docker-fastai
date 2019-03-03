@@ -1,3 +1,8 @@
+ARG CUDA
+ARG CUDNN
+ARG UBUNTU_VERSION
+ARG PYTHON_VERSION
+
 FROM nvidia/cuda:${CUDA}-cudnn${CUDNN}-devel-ubuntu${UBUNTU_VERSION} as base
 
 RUN echo "cuda version: $CUDA"
