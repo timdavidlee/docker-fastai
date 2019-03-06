@@ -13,5 +13,5 @@ docker run --rm -it -d \
            -p 8888 \
            -v persist_data/:/persist_data/ \
            --name fastai_gpu_jup_container \
-           -e PASSWORD=$PASSWORD
+           -e PASSWORD=$PASSWORD \
            chaffix/fastai:stable
