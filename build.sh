@@ -1,1 +1,1 @@
-docker build -f images/fastai-stable.Dockerfile -t chaffix/fastai:stable . 
+docker build -f stable/fastai-stable.Dockerfile -t chaffix/fastai:stable . 
