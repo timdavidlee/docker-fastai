@@ -24,20 +24,20 @@ ENV LANG C.UTF-8
 
 # install python 3.6
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    python3.7 \
-    python3.7-distutils \
-    python3.7-dev
+    python3.6 \
+    python3.6-distutils \
+    python3.6-dev
 
 RUN apt-get install wget
 RUN wget https://bootstrap.pypa.io/get-pip.py
-RUN python3.7 get-pip.py
+RUN python3.6 get-pip.py
 
-RUN pip3.7 install -U pip
-RUN pip3.7 install -U setuptools
+RUN pip3.6 install -U pip
+RUN pip3.6 install -U setuptools
 
 # Some TF tools expect a "python" binary
-RUN ln -s /usr/bin/python3.7 /usr/bin/python 
-RUN ln -s /usr/bin/pip3.7 /usr/bin/pip 
+RUN ln -s /usr/bin/python3.6 /usr/bin/python 
+RUN ln -s /usr/bin/pip3.6 /usr/bin/pip 
 
 RUN pip install -U \
     pyyaml \
