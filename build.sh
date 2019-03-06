@@ -1,0 +1,1 @@
+docker build -f images/fastai-stable.Dockerfile .

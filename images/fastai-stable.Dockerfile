@@ -81,7 +81,7 @@ RUN pip install git+https://github.com/fastai/fastai.git
 # install jupyter notebook
 
 # Set up our notebook config.
-RUN pip install -y \
+RUN pip install \
     jupyterlab \
     jupyter \
     notebook \
@@ -92,4 +92,8 @@ RUN pip install -y \
 
 COPY jupyter_notebook_config.py /root/.jupyter/
 COPY run_jupyter.sh /
+
+EXPOSE 8888
+EXPOSE 6006
+
 CMD ["run_jupyter.sh", "--allow-root"]
