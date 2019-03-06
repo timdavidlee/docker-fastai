@@ -64,7 +64,7 @@ Build the image
 Start a container
 
 ```
-run.sh <SAVE_DIR (defaults to {pwd}/save_dir/)> <PASSWORD (default is notebook)>
+./run.sh <SAVE_DIR (defaults to {pwd}/save_dir/)> <PASSWORD (default is notebook)>
 ```
 
 
