@@ -1,19 +1,11 @@
-PASSWORD=$1
-
-if [[ "$PASSWORD" == "" ]]; then
-  echo "please provide a notebook password after the run command"
-  echo "./run.sh <MYPASSWORD>"
-  exit 1
-fi
-
 docker run -it -d \
            --runtime=nvidia \
            --shm-size=1g \
            -p 8888:8888 \
-           -v "$PWD/persistdata/:/persistdata/" \
            --name fastai_gpu_jup_container \
-           -e PASSWORD=$PASSWORD \
+           -e PASSWORD="notebook" \
            chaffix/fastai:stable
 
 docker ps | grep fastai
 echo "this is running locally at 8888, ensure that this port is opened in your AWS / GCP settings"
+docker logs fastai_gpu_jup_container
