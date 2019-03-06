@@ -85,12 +85,19 @@ RUN pip install -U \
 RUN pip install \
     jupyterlab \
     jupyter \
-    ipywidgets
-    
+    ipywidgets \
+    jupyter_http_over_ws
+
+RUN jupyter serverextension enable --py jupyter_http_over_ws
+
+
 COPY jupyter_notebook_config.py /root/.jupyter/
 COPY run_jupyter.sh /
 
 EXPOSE 8888
 EXPOSE 6006
+
+RUN python -m ipykernel.kernelspec
+
 
 CMD ["bash", "-c", "jupyter lab --allow-root --ip 0.0.0.0 --no-browser"]
