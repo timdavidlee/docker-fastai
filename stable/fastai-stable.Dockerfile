@@ -91,9 +91,9 @@ RUN pip install \
     jupyter_contrib_nbextensions
 
 COPY jupyter_notebook_config.py /root/.jupyter/
-COPY run_jupyter.sh .
+COPY run_jupyter.sh /
 
 EXPOSE 8888
 EXPOSE 6006
 
-CMD ["run_jupyter.sh", "--allow-root"]
+CMD ["./run_jupyter.sh", "--allow-root"]
