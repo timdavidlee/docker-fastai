@@ -48,35 +48,35 @@ RUN pip install -U \
     cython \
     typing
 
-RUN pip install pandas \
-        numpy \
-        keras \
-        sklearn \
-        torchvision
+# RUN pip install pandas \
+#         numpy \
+#         keras \
+#         sklearn \
+#         torchvision
 
-# fastai
+# # fastai
 
-RUN pip install -U \
-    bs4 \
-    fastprogress \
-    matplotlib \
-    bottleneck \
-    numexpr \
-    nvidia-ml-py3 \
-    packaging \
-    pillow \
-    requests \
-    scipy \
-    spacy \
-    typing \
-    dataclasses \
-    jupyter \
-    jupyterlab \
-    nbconvert \
-    nbformat \
-    traitlets
+# RUN pip install -U \
+#     bs4 \
+#     fastprogress \
+#     matplotlib \
+#     bottleneck \
+#     numexpr \
+#     nvidia-ml-py3 \
+#     packaging \
+#     pillow \
+#     requests \
+#     scipy \
+#     spacy \
+#     typing \
+#     dataclasses \
+#     jupyter \
+#     jupyterlab \
+#     nbconvert \
+#     nbformat \
+#     traitlets
 
-RUN pip install git+https://github.com/fastai/fastai.git
+# RUN pip install git+https://github.com/fastai/fastai.git
 
 # install jupyter notebook
 
