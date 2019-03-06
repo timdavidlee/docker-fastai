@@ -96,4 +96,4 @@ COPY run_jupyter.sh /
 EXPOSE 8888
 EXPOSE 6006
 
-CMD ["'/run_jupyter.sh", "--allow-root"]
+CMD ["/run_jupyter.sh", "--allow-root"]
