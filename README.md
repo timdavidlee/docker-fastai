@@ -68,4 +68,20 @@ Start a container
 ```
 
 
+### How to SSH Tunnel from your local computer to an AWS / GCP instance:
+
+Instead of fiddling with AWS / GCP port security, port 22 (the port used for SSH) can be used for "tunneling" into your instance using the following commands.
+
+```
+# ssh -i <YOUR PEM KEY> -L <LAPTOP PORT>:<AWS ADDRESS>:<AWS INSTANCE PORT> <USER>@<AWS INSTANCE>
+# for a ubuntu instance
+ssh -i mykey.pem -L 28888:localhost:8888 ubuntu@ec2-server.cloud
+
+# for a amazon AMI
+ssh -i mykey.pem -L 28888:localhost:8888 ec2-user@ec2-server.cloud
+```
+
+The notebook will run exposing 8888, this is hard-coded in the dockerfile. This can be adjusted when running the container by changing the corresponding flag in method 1: `-p 12345:8888`.
+
+
 
