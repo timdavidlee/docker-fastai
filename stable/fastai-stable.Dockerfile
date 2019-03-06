@@ -79,6 +79,9 @@ RUN pip install -U \
 
 RUN pip install git+https://github.com/fastai/fastai.git
 
+RUN mkdir /fastai
+RUN cd fastai/ && git clone https://github.com/fastai/fastai.git
+
 # install jupyter notebook
 
 # Set up our notebook config.
@@ -98,5 +101,6 @@ EXPOSE 6006
 
 RUN python -m ipykernel.kernelspec
 
+WORKDIR /fastai
 
 CMD ["bash", "-c", "jupyter lab --allow-root --ip 0.0.0.0 --no-browser"]
