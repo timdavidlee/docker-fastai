@@ -6,7 +6,7 @@ if [[ "$PASSWORD" == "" ]]; then
   exit 1
 fi
 
-docker run --rm -it -d \
+docker run -it -d \
            --runtime=nvidia \
            --shm-size=1g \
            -p 8888:8888 \
