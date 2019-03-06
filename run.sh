@@ -1,4 +1,3 @@
-mkdir persist_data
 PASSWORD=$1
 
 if [[ "$PASSWORD" == "" ]]; then
