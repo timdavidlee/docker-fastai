@@ -1,5 +1,5 @@
 # will be the most current version of the fastai library
-FROM nvidia/cuda:10.0-cudnn7-devel-ubuntu18.04 as base
+FROM nvidia/cuda:10.0-cudnn7-runtime-ubuntu16.04 as base
 
 LABEL maintainer="chaffixdev@gmail.com"
 
