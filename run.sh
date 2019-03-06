@@ -4,6 +4,8 @@ if [[ "$SAVEDIR" == "" ]]; then
   SAVE_DIR="$PWD/container_save/"
 fi
 
+echo "save directory: $SAVE_DIR"
+
 docker run -it -d --rm \
            --runtime=nvidia \
            --shm-size=1g \
