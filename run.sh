@@ -1,7 +1,7 @@
 mkdir persist_data
 PASSWORD=$1
 
-if [[ "$PASSWORD" = ""]]; then
+if [[ "$PASSWORD" == "" ]]; then
   echo "please provide a notebook password after the run command"
   echo "./run.sh <MYPASSWORD>"
   exit 1
