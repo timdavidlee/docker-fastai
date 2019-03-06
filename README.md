@@ -8,7 +8,7 @@ I made this docker to test some of the library out on company hardware, and had 
 
 This is convenient if you switch workplaces a lot, and don't want to do the full installation of CUDA, python, fastai, and pytorch every single time.
 
-#### Pull the image from docker hub
+###  Method 1: Pull the image from docker hub
 
 ```
 docker pull chaffix/fastai:stable
@@ -47,7 +47,7 @@ To be clear, this docker will run on any system that docker-ce is installed. [Th
 - **Ubuntu**:18.04
 
 
-## Build and run Docker from Github
+### Method 2: Build and run Docker from Github (this repo)
 
 Pull the repo
 
