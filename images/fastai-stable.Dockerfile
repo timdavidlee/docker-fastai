@@ -85,7 +85,7 @@ RUN pip install \
     jupyterlab \
     jupyter \
     notebook \
-    ipywidets \
+    ipywidgets \
     nbextensions \
     jupyter_http_over_ws \
     jupyter_contrib_nbextensions
