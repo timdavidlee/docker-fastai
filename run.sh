@@ -1,10 +1,16 @@
 SAVE_DIR=$1
+PASSWORD=$2
 
 if [[ "$SAVEDIR" == "" ]]; then
   SAVE_DIR="$PWD/container_save/"
 fi
 
+if [[ "$PASSWORD" == "" ]]; then
+  PASSWORD="notebook"
+fi
+
 echo "save directory: $SAVE_DIR"
+echo "password: $PASSWORD"
 
 docker run -it -d --rm \
            --runtime=nvidia \
@@ -12,7 +18,7 @@ docker run -it -d --rm \
            -p 8888:8888 \
            -v $SAVE_DIR:/fastai/save_dir/ \
            --name fastai_gpu_jup_container \
-           -e PASSWORD="notebook" \
+           -e PASSWORD=$PASSWORD \
            chaffix/fastai:stable
 
 docker ps | grep fastai
