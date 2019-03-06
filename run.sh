@@ -1,7 +1,14 @@
-docker run -it -d \
+SAVE_DIR=$1
+
+if [[ "$SAVEDIR" == "" ]]; then
+  SAVE_DIR="$PWD/container_save/"
+fi
+
+docker run -it -d --rm \
            --runtime=nvidia \
            --shm-size=1g \
            -p 8888:8888 \
+           -v $SAVE_DIR:/save_dir/
            --name fastai_gpu_jup_container \
            -e PASSWORD="notebook" \
            chaffix/fastai:stable
