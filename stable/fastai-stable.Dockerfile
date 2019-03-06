@@ -1,13 +1,12 @@
 # will be the most current version of the fastai library
-FROM nvidia/cuda:10.0-cudnn7-runtime-ubuntu18.04 as base
+FROM nvidia/cuda:10.0-cudnn7-devel-ubuntu18.04 as base
 
 LABEL maintainer="chaffixdev@gmail.com"
 
-# Needed for string substitution 
-SHELL ["/bin/bash", "-c"]
 # Pick up some TF dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \
         build-essential \
+        cmake \
         curl \
         pkg-config \
         software-properties-common \
@@ -16,6 +15,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         libjpeg-dev \
         libpng-dev \
         git \
+        screen \
+        htop \
         && rm -rf /var/lib/apt/lists/*
 
 
@@ -84,16 +85,12 @@ RUN pip install -U \
 RUN pip install \
     jupyterlab \
     jupyter \
-    notebook \
-    ipywidgets \
-    nbextensions \
-    jupyter_http_over_ws \
-    jupyter_contrib_nbextensions
-
+    ipywidgets
+    
 COPY jupyter_notebook_config.py /root/.jupyter/
 COPY run_jupyter.sh /
 
 EXPOSE 8888
 EXPOSE 6006
 
-CMD ["/run_jupyter.sh", "--allow-root"]
+CMD ["bash", "-c", "jupyter lab --allow-root --ip 0.0.0.0 --no-browser"]
