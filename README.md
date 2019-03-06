@@ -29,6 +29,14 @@ docker run -it -d --rm \
            chaffix/fastai:stable
 ```
 
+#### Connect in your local browser 
+
+(unless you connecting remote, see below on tunneling)
+
+```
+localhost:8888
+```
+
 #### Stop container when done
 
 ```
@@ -83,5 +91,10 @@ ssh -i mykey.pem -L 28888:localhost:8888 ec2-user@ec2-server.cloud
 
 The notebook will run exposing 8888, this is hard-coded in the dockerfile. This can be adjusted when running the container by changing the corresponding flag in method 1: `-p 12345:8888`.
 
+#### Then connect with local browser
+
+```
+localhost:28888 # will connect through ssh to remote server running localhost:8888
+```
 
 
