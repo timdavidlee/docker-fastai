@@ -86,7 +86,9 @@ RUN pip install -y \
     jupyter \
     notebook \
     ipywidets \
-    nbextensions
+    nbextensions \
+    jupyter_http_over_ws \
+    jupyter_contrib_nbextensions
 
 COPY jupyter_notebook_config.py /root/.jupyter/
 COPY run_jupyter.sh /
