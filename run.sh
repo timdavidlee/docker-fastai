@@ -6,7 +6,7 @@ fi
 
 echo "save directory: $SAVE_DIR"
 
-docker run -it -d -rm \
+docker run -it -d --rm \
            --runtime=nvidia \
            --shm-size=1g \
            -p 8888:8888 \
