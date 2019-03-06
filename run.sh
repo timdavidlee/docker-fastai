@@ -10,7 +10,7 @@ docker run --rm -it -d \
            --runtime=nvidia \
            --shm-size=1g \
            -p 8888 \
-           -v "persistdata/:/persistdata/" \
+           -v "{$PWD}/persistdata/:/persistdata/" \
            --name fastai_gpu_jup_container \
            -e PASSWORD=$PASSWORD \
            chaffix/fastai:stable
